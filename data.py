@@ -102,10 +102,11 @@ async def main():
     
     # read the environment variables
     from dotenv import load_dotenv
-    load_dotenv()
+    load_dotenv(override=True)
 
     # restart streamlit app if mode is changed    
     mode = os.getenv("MODE", "search")
+    print(f"Mode: {mode}")
 
     
     # search_data = True --> Use Azure OpenAI on your data
